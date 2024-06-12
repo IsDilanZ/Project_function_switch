@@ -27,7 +27,7 @@ public class HelloApplication extends Application {
                 break;
             case "B":
                 printAnyString("Type a message you want to print");
-                String stringValue = scanner.nextLine();
+                readAndPrint();
                 break;
             case "C":
                 cosOfEnteredValue();
@@ -47,7 +47,9 @@ public class HelloApplication extends Application {
     }
 
     public static Void readAndPrint (){
-        
+        Scanner scannerInFunction = new Scanner(System.in);
+        String printString = scannerInFunction.nextLine();
+        System.out.println(printString);
     }
 
     public static void cosOfEnteredValue(){
